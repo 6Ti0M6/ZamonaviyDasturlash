@@ -1,1 +1,2 @@
 # ZamonaviyDasturlash
+PROEKT - rejasi
