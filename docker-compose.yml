@@ -1,1 +1,22 @@
+version: '3.8'
 
+services:
+  # База данных PostgreSQL (для группы G2)
+  db:
+    image: postgres:15-alpine
+    container_name: project_db
+    restart: siempre
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: student_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
+
+# docker-compose up
